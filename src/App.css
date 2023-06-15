@@ -1,0 +1,193 @@
+/* stylelint-disable declaration-no-important */
+
+@font-face {
+  font-family: Star Jedi;
+  src: url('./media/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: Star Jedi Hollow;
+  src: url('./media/fonts/Starjhol.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-color: var(--themeYellow) var(--main-scroll);
+
+}
+
+:root {
+
+  --themeYellow: #ffe81f;
+
+  --secondaryTextColor: #ffe91fa7;
+
+  --softWhite: rgba(255, 255, 255, 0.3);
+
+  --main-color: rgba(0, 0, 0, 0.45);
+
+  --buttonTextColor: rgba(0, 0, 0, 0.75);
+
+  --mainTextColor: rgba(255, 255, 255, 0.8);
+
+  --main-scroll: rgba(0, 0, 0, 0.504);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  background: var(--main-scroll);
+  height: 12px;
+  transition: 300ms;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondaryTextColor);
+  border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--themeYellow);
+  box-shadow: 0 0 4px yellow;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--themeYellow);
+}
+
+
+label {
+  display: block;
+}
+
+html {
+  background: black;
+  background-attachment: fixed;
+  background-image: url('./media/images/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-family: NK57 monospace , sans-serif;
+  justify-content: center;
+
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  background-color: var(--main-color);
+
+  /* border: 1px solid rgba(108, 192, 209, 0.5); */
+  border-radius: 10px;
+}
+
+.glass-header {
+  backdrop-filter: blur(35px);
+  background-color: var(--main-color);
+  border-radius: 10px;
+
+  /* border: 1px solid rgba(108, 192, 209, 0.5); */
+
+}
+
+.main--container {
+  margin: 40px;
+  max-width: 1200px;
+  padding: 20px 10px 40px;
+}
+
+a {
+  color: #ffe81f;
+}
+
+.SearchName {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pressedButton {
+  background: var(--themeYellow) ! important;
+}
+
+.unpressedButton {
+  color: var(--secondaryTextColor) ! important;
+}
+
+.ToolBar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.ToolBar__filters {
+  padding: 10px;
+}
+
+.Header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+}
+
+.Header__title {
+  color: var(--themeYellow);
+  font-family: Star Jedi Hollow , sans-serif;
+  font-size: 60px;
+  line-height: 50px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+
+  /* letter-spacing: -0.03em; */
+}
+
+.Header__span {
+  font-family: Star Jedi , sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+.Footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.Loading, .WaitMessage {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* Turn off parallax scrolling for all tablets and phones.
+Increase/decrease the pixels if needed */
+
+@media only screen and ( max-width : 1200px ) {
+
+  .parallax {
+    background-attachment: scroll;
+  }
+
+  .main--container {
+    margin: 0;
+  }
+}
